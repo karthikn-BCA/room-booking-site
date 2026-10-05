@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-
+const listing = require("./models/lising.js")
 const MONGO_URL = "mongodb://127.0.0.1:27017//wanderlust";
 
 main()
@@ -18,6 +18,10 @@ async function main() {
 
 app.get("/", (req, res) => {
   res.send("Hi, I am root");
+});
+
+app.get("/", (req, res) => {
+  res.send("hi, i am root");
 });
 
 app.listen(8080, () => {
