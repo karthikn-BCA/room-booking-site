@@ -33,6 +33,14 @@ module.exports = Listing;
 
 
 
+
+
+
+
+
+
+
+
 // const mongoose = require("mongoose");
 // const Schema = mongoose.Schema;
 
@@ -57,3 +65,6 @@ module.exports = Listing;
 
 // const listing = mongoose.model("listing" , listingSchema);
 // module.exports = listing;
+
+
+
