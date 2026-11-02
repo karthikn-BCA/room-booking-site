@@ -51,9 +51,13 @@ app.get("/listings/:id", async (req, res) => {
 
 // Create Route
 app.post("/listings", async (req, res) => {
-  const newListing = new Listing(req.body.listing);
-  await newListing.save();
-  res.redirect("/listings");
+  try {
+    const newListing = new Listing(req.body.listing);
+    await newListing.save();
+    res.redirect("/listings");
+  } catch (err) {
+    next(err);
+  }
 });
 
 // edit Route
@@ -86,10 +90,15 @@ app.delete("/listings/:id", async (req, res) => {
 //     location: "Calangute, Goa",
 //     country: "India",
 //   });
+
 //   await sampleListing.save();
 //   console.log("sample was saved");
 //   res.send("Sucessful Testing");
 // });
+
+app.use((err, req, res, next) => {
+  console.log("something went wrong!");
+});
 
 app.listen(8080, () => {
   console.log("server is listening to port 8080");

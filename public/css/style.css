@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-   flex: 1;
+  flex: 1;
 }
 
 /* Navbar */
@@ -64,10 +64,10 @@ body {
   margin-bottom: 2rem;
 }
 
-.card-img-top{ 
+.card-img-top {
   border-radius: 1rem !important;
   width: 100% !important;
-object-fit: cover !important;
+  object-fit: cover !important;
 }
 
 .card-body {
@@ -94,13 +94,27 @@ object-fit: cover !important;
 
 /* new Page */
 
-.add-btn  {
+.add-btn {
   background-color: #fe424d !important;
   border: none !important;
 }
 
 /* edit page */
-.edit-btn  {
+.edit-btn {
   background-color: #fe424d !important;
   border: none !important;
-}  
+}
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
